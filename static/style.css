@@ -232,3 +232,16 @@ a, a:hover {
 .small {
     height: 100px;
 }
+
+.full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.full-img {
+    flex-shrink: 0;
+    width: 1000px;
+    height: 1000px;
+}

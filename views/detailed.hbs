@@ -23,7 +23,7 @@
                 <div class="col abs-center p bg-black text-white">
                     <h3><strong>{{result.title}}</strong></h3>
                 </div>
-                <form action="/" method="GET">
+                <form action="{{root}}" method="GET">
                     <button class="s-holder border col" type="submit">Home</button>
                 </form>
             </div>
@@ -34,7 +34,7 @@
                 <p>{{{result.description}}}</p>
             </div>
             <div class="row justify-content-end">
-                <form action="/reviews/{{result.title}}" method="GET">
+                <form action="{{root}}/reviews/{{result.title}}" method="GET">
                     <button class="s-holder border col" type="submit">Find Reviews!</button>
                 </form>
             </div>

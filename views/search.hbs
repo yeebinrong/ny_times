@@ -4,7 +4,7 @@
             <h2>Searching for titles starting with "{{q}}"</h2>
         </div>
         <div class="col justify-content-end">
-            <form action="/" method="GET">
+            <form action="{{root}}" method="GET">
                 <button class="s-holder border col" type="submit">Home</button>
             </form>      
         </div>
@@ -14,7 +14,7 @@
     {{#if titlesData}}
         {{#each titlesData}}
             <div class="row">
-                <a class="text-left s-holder border col text-lg" href="/detailed/{{book_id}}">{{title}}</a>
+                <a class="text-left s-holder border col text-lg" href="{{../root}}/detailed/{{book_id}}">{{title}}</a>
             </div>
         {{/each}}
     {{else}}
@@ -24,7 +24,7 @@
     {{/if}}
 </div>
 <div class="container">
-    <form action="/search" method="GET">
+    <form action="{{root}}/search" method="GET">
         <input type="hidden" name="q" value="{{q}}">
         {{#if checkZero}}
         <button class="s-holder border col" type="submit" name="offset" value="{{prevOffset}}">Prev</button>

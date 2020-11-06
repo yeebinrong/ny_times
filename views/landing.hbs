@@ -4,7 +4,7 @@
     </div>
     <div class="row justify-content-center">
         {{#each alphabets}}
-            <form action="/search" method="GET">
+            <form action="{{../root}}/search" method="GET">
                 <button class="s-holder border col" type="submit" name="q" value="{{this}}">
                     {{this}}
                 </button>
@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row justify-content-center">
         {{#each numbers}}
-            <form action="/search" method="GET">
+            <form action="{{../root}}/search" method="GET">
                 <button class="s-holder border col" type="submit" name="q" value="{{this}}">
                     {{this}}
                 </button>
