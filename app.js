@@ -1,4 +1,5 @@
 // load libraries
+const { json } = require('express')
 const express = require('express')
 const fetch = require('node-fetch')
 const withQuery = require('with-query').default
@@ -112,7 +113,8 @@ module.exports = (p) => {
         let genres = result[0].genres
         authors = authors.replace(/\|/g, ', ') 
         genres = genres.replace(/\|/g, ', ')
-
+        const arrayGenres = genres.split(', ')
+        const arrayAuthors = authors.split(', ')
         resp.format({
             'text/html': () => {
                 resp.status(200)
@@ -130,7 +132,16 @@ module.exports = (p) => {
             'application/json': () => {
                 resp.status(200)
                 resp.type('application/json')
-                resp.send(result[0])
+                resp.send({
+                    bookId: result[0].book_id,
+                    title: result[0].title,
+                    authors: arrayAuthors,
+                    summary: result[0].description,
+                    pages: result[0].pages,
+                    rating: result[0].rating,
+                    ratingCount: result[0].rating_count,
+                    genre: arrayGenres
+                })
             },
             default: () => {
                 // log the request and respond with 406
