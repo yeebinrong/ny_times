@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 flex-column text-left">
+            <div class="row">
+                <img src="{{result.image_url}}" alt="">
+            </div>
+            <div class="row">
+                <p>Pages: {{result.pages}}</p>
+            </div>
+            <div class="row">
+                <p>Rating: {{result.rating}} ({{result.rating_count}})</p>
+            </div>
+            <div class="row">
+                <p>{{genres}}</p>
+            </div>
+        </div>
+        <div class="col-8 text-left">
+            <div class="row">
+                <div class="col">
+                    <h3><strong>{{result.title}}</strong></h3>
+                </div>
+                <div class="col">
+                    <form action="/" method="GET">
+                        <button type="submit">Home</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <h5><em>{{authors}}</em></h5>
+            </div>
+            <div class="row">
+                <p>{{{result.description}}}</p>
+            </div>
+            <div class="row">
+                <form action="/reviews/{{result.title}}" method="GET">
+                    <button type="submit">Find Reviews!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

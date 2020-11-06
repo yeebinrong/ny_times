@@ -1,0 +1,35 @@
+{{#if qty}}
+    {{#each reviews}}
+    <div class="container">
+            <div class="row">
+                <h3>{{book_title}}</h3>
+            </div>
+            <div class="row">
+                <h5>{{book_author}}</h5>
+            </div>
+            <div class="row">
+                <h5>{{byline}}</h5>
+            </div>
+            <div class="row">
+                <h5>{{publication_dt}}</h5>
+            </div>
+            <div class="row text-left">
+                <h5>{{summary}}</h5>
+            </div>
+            <div class="row justify-content-end">
+                <a href="{{url}}" target="_blank">Full Review</a>
+            </div>
+    </div>
+    {{/each}}
+{{else}}
+    <div class="container">
+        <div class="row">
+            <h3>No reviews found for {{book_title}}</h3>
+        </div>
+    </div>
+{{/if}}
+<div class="container">
+    <div class="row">
+        <p>Copyright (c) 2019 The New York Times Company.  All Rights Reserved.</p>
+    </div>
+</div>

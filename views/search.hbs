@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Letter {{q}}</h1>
+        </div>
+        <div class="col justify-content-end">
+            <form action="/" method="GET">
+                <button type="submit">Home</button>
+            </form>      
+        </div>
+    </div>
+</div>
+<div class="container">
+    {{#each titlesData}}
+        <div class="row">
+            <a class="text-left" href="/detailed/{{book_id}}">{{title}}</a>
+        </div>
+    {{/each}}
+</div>
+<div class="container">
+    <form action="/search" method="GET">
+        <input type="hidden" name="q" value="{{q}}">
+        {{#if checkZero}}
+        <button type="submit" name="offset" value="{{prevOffset}}">Prev</button>
+        {{/if}}
+        {{#if checkMax}}
+        <button type="submit" name="offset" value="{{nextOffset}}">Next</button>
+        {{/if}}
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        {{#each alphabets}}
+            <div class="col-2">
+                <form action="/search" method="GET">
+                    <button class="s-holder" type="submit" name="q" value="{{this}}">
+                        {{this}}
+                    </button>
+                </form>
+            </div>
+        {{/each}}
+        <div class="col-1"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {{#each numbers}}
+            <div class="col-2">
+                <form action="/search" method="GET">
+                    <button class="s-holder" type="submit" name="q" value="{{this}}">
+                        {{this}}
+                    </button>
+                </form>
+            </div>
+        {{/each}}
+    </div>
+</div>
