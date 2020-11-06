@@ -1,23 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10 text-center abs-center text-white bg-black">
+            <h2>Searching for reviews of titles "{{book_title}}"</h2>
+        </div>
+        <div class="col justify-content-end">
+            <form action="/" method="GET">
+                <button class="s-holder border col" type="submit">Home</button>
+            </form>      
+        </div>
+    </div>
+</div>
 {{#if qty}}
     {{#each reviews}}
-    <div class="container">
-            <div class="row">
+    <div class="container bg-lightgrey round">
+            <div class="row round p-3 bg-black text-white">
                 <h3>{{book_title}}</h3>
             </div>
-            <div class="row">
-                <h5>{{book_author}}</h5>
-            </div>
-            <div class="row">
-                <h5>{{byline}}</h5>
-            </div>
-            <div class="row">
-                <h5>{{publication_dt}}</h5>
-            </div>
-            <div class="row text-left">
-                <h5>{{summary}}</h5>
+            <div class="round mt-3 p-3 bg-black text-white">
+                <div class="row plr">
+                    <h5>By <em>{{book_author}}</em></h5>
+                </div>
+                <div class="row plr">
+                    <h5>Reviewer: <em>{{byline}}</em></h5>
+                </div>
+                <div class="row plr">
+                    <h5>Date: {{publication_dt}}</h5>
+                </div>
+                <div class="row text-left plr">
+                    <h5>{{summary}}</h5>
+                </div>
             </div>
             <div class="row justify-content-end">
-                <a href="{{url}}" target="_blank">Full Review</a>
+                <a class="s-holder border col-1 abs-center" href="{{url}}" target="_blank">Full Review</a>
             </div>
     </div>
     {{/each}}
@@ -28,7 +42,7 @@
         </div>
     </div>
 {{/if}}
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <p>Copyright (c) 2019 The New York Times Company.  All Rights Reserved.</p>
     </div>

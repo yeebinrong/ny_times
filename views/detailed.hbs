@@ -1,39 +1,41 @@
 <div class="container">
     <div class="row">
-        <div class="col-4 flex-column text-left">
-            <div class="row">
-                <img src="{{result.image_url}}" alt="">
-            </div>
-            <div class="row">
-                <p>Pages: {{result.pages}}</p>
-            </div>
-            <div class="row">
-                <p>Rating: {{result.rating}} ({{result.rating_count}})</p>
-            </div>
-            <div class="row">
-                <p>{{genres}}</p>
+        <div class="col-3">
+            <div class="text-left mr-3">
+                <div class="row">
+                    <img class="round" src="{{result.image_url}}" alt="">
+                </div>
+                <div class="container round pt-3 plr mt-3 bg-black text-white">
+                    <div class="row">
+                        <p>Pages: {{result.pages}}</p>
+                    </div>
+                    <div class="row">
+                        <p>Rating: {{result.rating}} ({{result.rating_count}})</p>
+                    </div>
+                    <div class="row mb-3">
+                        <p>{{genres}}</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-8 text-left">
             <div class="row">
-                <div class="col">
+                <div class="col abs-center p bg-black text-white">
                     <h3><strong>{{result.title}}</strong></h3>
                 </div>
-                <div class="col">
-                    <form action="/" method="GET">
-                        <button type="submit">Home</button>
-                    </form>
-                </div>
+                <form action="/" method="GET">
+                    <button class="s-holder border col" type="submit">Home</button>
+                </form>
             </div>
-            <div class="row">
-                <h5><em>{{authors}}</em></h5>
+            <div class="row round p mt-3 bg-black text-white">
+                <h5>By: <em>{{authors}}</em></h5>
             </div>
-            <div class="row">
+            <div class="row round p mt-3 bg-black text-white">
                 <p>{{{result.description}}}</p>
             </div>
-            <div class="row">
+            <div class="row justify-content-end">
                 <form action="/reviews/{{result.title}}" method="GET">
-                    <button type="submit">Find Reviews!</button>
+                    <button class="s-holder border col" type="submit">Find Reviews!</button>
                 </form>
             </div>
         </div>

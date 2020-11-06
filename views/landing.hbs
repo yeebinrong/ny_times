@@ -1,28 +1,25 @@
 <div class="container">
-    <div class="row">
-        <div class="col-1"></div>
+    <div class="row justify-content-center">
+        <h1 class="p bg-black text-white">Search by the first letter of title.</h1>
+    </div>
+    <div class="row justify-content-center">
         {{#each alphabets}}
-            <div class="col-2">
-                <form action="/search" method="GET">
-                    <button class="s-holder" type="submit" name="q" value="{{this}}">
-                        {{this}}
-                    </button>
-                </form>
-            </div>
+            <form action="/search" method="GET">
+                <button class="s-holder border col" type="submit" name="q" value="{{this}}">
+                    {{this}}
+                </button>
+            </form>
         {{/each}}
-        <div class="col-1"></div>
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         {{#each numbers}}
-            <div class="col-2">
-                <form action="/search" method="GET">
-                    <button class="s-holder" type="submit" name="q" value="{{this}}">
-                        {{this}}
-                    </button>
-                </form>
-            </div>
+            <form action="/search" method="GET">
+                <button class="s-holder border col" type="submit" name="q" value="{{this}}">
+                    {{this}}
+                </button>
+            </form>
         {{/each}}
     </div>
 </div>
